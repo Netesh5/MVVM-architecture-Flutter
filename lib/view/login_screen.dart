@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mvvmapp/utils/routes/routes_name.dart';
+import 'package:mvvmapp/view/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -15,10 +17,15 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Log in ",
               style: TextStyle(fontSize: 25),
-            )
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteName.home);
+                },
+                child: const Text("Log in"))
           ],
         ),
       ),
