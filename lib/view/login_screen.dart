@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mvvmapp/utils/routes/routes_name.dart';
-import 'package:mvvmapp/view/home_screen.dart';
+import 'package:mvvmapp/utils/utils.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -24,6 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, RouteName.home);
+                  utlis().showSnakbar("Next page", context);
                 },
                 child: const Text("Log in"))
           ],
